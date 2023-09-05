@@ -36,17 +36,13 @@ namespace PeluqueriaApi
 
 			string connectionString = configuration.GetConnectionString("DefaultConnection");
 
-			var serviceProvider =  services.AddDbContext<AppDbContext>(options =>
-						options.UseSqlServer(connectionString), ServiceLifetime.Scoped)
-					.BuildServiceProvider();
-
-			using (var scope = serviceProvider.CreateScope())
+			services.AddDbContext<AppDbContext>(options =>
 			{
-				var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-				dbContext.Database.EnsureCreated();
+				options.UseSqlServer(connectionString);
+			});
 
-				Console.WriteLine("Base de datos creada o verificada.");
-			}
+
+
 			services.AddControllers();
 			services.AddSwaggerGen(c =>
 			{
@@ -64,6 +60,11 @@ namespace PeluqueriaApi
 				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PeluqueriaApi v1"));
 			}
 
+			using (var scope = app.ApplicationServices.CreateScope())
+			{
+				var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+				dbContext.Database.EnsureCreated();
+			}
 
 			app.UseHttpsRedirection();
 

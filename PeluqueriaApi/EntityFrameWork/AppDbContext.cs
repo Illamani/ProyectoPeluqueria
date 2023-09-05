@@ -9,6 +9,10 @@ namespace PeluqueriaApi.EntityFrameWork
 		: base(options)
 		{
 		}
+		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+		{
+			optionsBuilder.UseSqlServer("Server=localhost;Database=peluqueria;Trusted_Connection=True;Encrypt=False;");
+		}
 		public DbSet<Turnos> Turnos { get; set; }
 	}
 }
