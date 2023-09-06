@@ -9,6 +9,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using PeluqueriaApi.EntityFrameWork;
+using PeluqueriaApi.EntityFrameWork.Repositorios;
+using PeluqueriaApi.Interfaces;
+using PeluqueriaApi.Servicios;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -41,7 +44,8 @@ namespace PeluqueriaApi
 				options.UseSqlServer(connectionString);
 			});
 
-
+			services.AddScoped<ITurnoService, TurnoService>();
+			services.AddScoped<ITurnoRepositorio, TurnoRepositorio>();
 
 			services.AddControllers();
 			services.AddSwaggerGen(c =>

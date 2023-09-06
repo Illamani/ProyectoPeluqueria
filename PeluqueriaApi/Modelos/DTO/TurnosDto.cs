@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace PeluqueriaApi.Modelos.Entidades
+namespace PeluqueriaApi.Modelos.DTO
 {
-	public class Turnos
+	public class TurnosDto
 	{
 		public int Id { get; set; }
 		public DateTime Fecha { get; set; }
