@@ -7,8 +7,10 @@ namespace PeluqueriaApi.Interfaces
 {
 	public interface ITurnoService
 	{
-		Task<List<Turnos>> GetTurnoByName(string nombre);
+        Task DeleteTurno(int id);
+        Task<List<Turnos>> GetTurnoByName(string nombre);
 		Task<List<Turnos>> GetTurnos();
 		Task InsertTurno(Turnos turno);
-	}
+        Task UpdateTurno(int id, Turnos turno);
+    }
 }
