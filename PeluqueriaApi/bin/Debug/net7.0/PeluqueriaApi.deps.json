@@ -12,6 +12,7 @@
           "Microsoft.EntityFrameworkCore.Design": "7.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.10",
+          "Riok.Mapperly": "3.1.0",
           "Swashbuckle.AspNetCore": "5.6.3"
         },
         "runtime": {
@@ -396,6 +397,14 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.1.1"
+          }
+        }
+      },
+      "Riok.Mapperly/3.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/Riok.Mapperly.Abstractions.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.0.0"
           }
         }
       },
@@ -949,6 +958,13 @@
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "Riok.Mapperly/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NLEHpzPOz6RzLiGdcL8mkzYZ1JX2W0CCGE+zpYAKT6P1RK6eLSvfQYrH04t3cs1XIne2LG0C80TB3MmFl2FXWg==",
+      "path": "riok.mapperly/3.1.0",
+      "hashPath": "riok.mapperly.3.1.0.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/5.6.3": {
       "type": "package",

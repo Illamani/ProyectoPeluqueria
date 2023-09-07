@@ -6,6 +6,8 @@ namespace PeluqueriaApi.Interfaces
 {
 	public interface ITurnoRepositorio
 	{
+		Task<List<Turnos>> GetTurnoByName(string nombre);
 		Task<List<Turnos>> GetTurnos();
+		Task InsertTurno(Turnos Turno);
 	}
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "36NkCpPoRUrTWMgGIsbwtp3twyPo3MO2qc9ZWkRn/rpeKDilr089b2c1kvF+nQkMZPTcslGIvA+eYr+bISP7Kw==",
+  "dgSpecHash": "q3yEIVdJvF7rgMJADjB5nI6Ntx0a9Sa1s8Dkrh05HM1CTLmA+8bt3V7GqBhGU2SAyFb9pRWqR+1kB5ODdvQUWw==",
   "success": true,
   "projectFilePath": "C:\\Users\\PC\\Desktop\\ProyectoPeluqueria\\PeluqueriaApi\\PeluqueriaApi.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,7 @@
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\riok.mapperly\\3.1.0\\riok.mapperly.3.1.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",

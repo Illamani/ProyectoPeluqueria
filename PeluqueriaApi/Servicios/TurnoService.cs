@@ -9,14 +9,24 @@ namespace PeluqueriaApi.Servicios
 	public class TurnoService : ITurnoService
 	{
 		private readonly ITurnoRepositorio _turnoRepository;
-        public TurnoService(ITurnoRepositorio turnoRepositorio)
-        {
-            _turnoRepository = turnoRepositorio;
-        }
+		public TurnoService(ITurnoRepositorio turnoRepositorio)
+		{
+			_turnoRepository = turnoRepositorio;
+		}
 
-        public async Task<List<Turnos>> GetTurnos()
+		public async Task<List<Turnos>> GetTurnos()
 		{
 			return await _turnoRepository.GetTurnos();
+		}
+
+		public async Task<List<Turnos>> GetTurnoByName(string nombre)
+		{
+			return await _turnoRepository.GetTurnoByName(nombre);
+		}
+
+		public async Task InsertTurno(Turnos turno)
+		{
+			await _turnoRepository.InsertTurno(turno);
 		}
 	}
 }
