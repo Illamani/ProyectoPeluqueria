@@ -1,12 +1,15 @@
-<button value="Mostrar Turnos">Mostrar Turnos</button>
+<button value="Mostrar Turnos" (click)="this.getTurnos()">Mostrar Turnos</button>
 <table>
     <tr>
         <td>Nombre</td>
         <td>Apellido</td>
         <td>Tipo de peinado</td>
         <td>Fecha</td>
-    <!-- </tr>
-    <tr *ngFor="let tur in ">
-
-    </tr> -->
+    </tr>
+    <tr *ngFor="let turno of turnosList">
+        <td>{{this.turno.nombre}}</td>
+        <td>{{this.turno.apellido}}</td>
+        <td>{{this.turno.tipoPeinado}}</td>
+        <td>{{this.turno.fecha}}</td>
+    </tr>
 </table>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TurnoService } from '../turno.service'
+import { TurnoService, Turno } from '../turno.service'
 
 @Component({
   selector: 'app-turno',
@@ -8,18 +8,20 @@ import { TurnoService } from '../turno.service'
 })
 export class TurnoComponent implements OnInit {
   turno: Turno | null = null;
+  turnosList : Turno[] = [];
 
   constructor(private turnoService : TurnoService) { }
 
   ngOnInit(): void {
-    this.turno = this.turnoService.getProduct();
+    this.turnoService.getProduct().subscribe(response =>{
+      this.turno = response;
+    });
   }
-}
 
-interface Turno{
-  id: number,
-  apellido: string,
-  fecha: string,
-  tipoPeinado: string,
-  nombre: string
+  getTurnos(){
+    this.turnoService.getTurnos().subscribe(response =>{
+      this.turnosList = response;
+      console.log(this.turnosList);
+    })
+  }
 }
