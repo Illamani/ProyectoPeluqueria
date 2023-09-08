@@ -7,11 +7,19 @@ import { TurnoService } from '../turno.service'
   styleUrls: ['./turno.component.css']
 })
 export class TurnoComponent implements OnInit {
+  turno: Turno | null = null;
 
   constructor(private turnoService : TurnoService) { }
 
   ngOnInit(): void {
-    this.turnoService.getProduct();
+    this.turno = this.turnoService.getProduct();
   }
+}
 
+interface Turno{
+  id: number,
+  apellido: string,
+  fecha: string,
+  tipoPeinado: string,
+  nombre: string
 }

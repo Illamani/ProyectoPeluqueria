@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TurnoComponent } from './turno/turno.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { TurnoComponent } from './turno/turno.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

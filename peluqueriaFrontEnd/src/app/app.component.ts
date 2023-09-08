@@ -9,8 +9,7 @@ import { TurnoService } from './turno.service';
 export class AppComponent implements OnInit {
 
   constructor(private turnoService : TurnoService) { }
-  ngOnInit(): void {
-    this.turnoService.getProduct();    
+  ngOnInit(): void {  
   }
   title = 'peluqueriaFrontEnd';
   

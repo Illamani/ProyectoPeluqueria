@@ -16,6 +16,11 @@ namespace PeluqueriaApi.EntityFrameWork.Repositorios
             _appDbContext = dbContext;
         }
 
+        public async Task<Turnos> GetFirstTurno()
+        {
+            return await _appDbContext.Turnos.FirstOrDefaultAsync();
+        }
+
         public async Task<List<Turnos>> GetTurnos()
         {
             return await _appDbContext.Turnos.ToListAsync();

@@ -14,6 +14,10 @@ namespace PeluqueriaApi.Servicios
 			_turnoRepository = turnoRepositorio;
 		}
 
+		public  async Task<Turnos> GetFirstTurno()
+		{
+			return await _turnoRepository.GetFirstTurno();
+		}
 		public async Task<List<Turnos>> GetTurnos()
 		{
 			return await _turnoRepository.GetTurnos();

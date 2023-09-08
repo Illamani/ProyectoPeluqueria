@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using PeluqueriaApi.Interfaces;
 using PeluqueriaApi.Modelos;
 using PeluqueriaApi.Modelos.DTO;
+using PeluqueriaApi.Modelos.Entidades;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -30,7 +31,15 @@ namespace PeluqueriaApi.Controllers
             await _turnoService.InsertTurno(turno);
         }
 
-        [HttpGet("get-turnos")]
+		[HttpGet("get-first-turno")]
+		public async Task<TurnosDto> GetFirstTurno()
+		{
+			var turno = await _turnoService.GetFirstTurno();
+			var turnosDto = _mapperly.Map(turno);
+			return turnosDto;
+		}
+
+		[HttpGet("get-turnos")]
         public async Task<List<TurnosDto>> GetTurnos()
         {
             var turno = await _turnoService.GetTurnos();
@@ -58,5 +67,5 @@ namespace PeluqueriaApi.Controllers
         {
             await _turnoService.DeleteTurno(id);
         }
-    }
+	}
 }
