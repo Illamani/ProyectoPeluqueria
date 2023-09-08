@@ -9,7 +9,7 @@ export class TurnoService {
   constructor(private http : HttpClient) { }
 
   getProduct(){
-    this.http.get('https://api.npms.io/v2/search?q=scope:angular').subscribe((data) =>{
+    this.http.get('https://localhost:44330/api/Turno/get-turnos').subscribe((data) =>{
       console.log(data)
     })
   }

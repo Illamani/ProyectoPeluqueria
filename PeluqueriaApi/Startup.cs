@@ -32,6 +32,13 @@ namespace PeluqueriaApi
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+			{
+				builder.AllowAnyOrigin()
+					   .AllowAnyMethod()
+					   .AllowAnyHeader();
+			}));
+
 			IConfigurationRoot configuration = new ConfigurationBuilder()
 					.SetBasePath(Directory.GetCurrentDirectory())
 					.AddJsonFile("appsettings.json")
@@ -43,6 +50,7 @@ namespace PeluqueriaApi
 			{
 				options.UseSqlServer(connectionString);
 			});
+
 
 			services.AddScoped<ITurnoService, TurnoService>();
 			services.AddScoped<ITurnoRepositorio, TurnoRepositorio>();
@@ -73,6 +81,8 @@ namespace PeluqueriaApi
 			app.UseHttpsRedirection();
 
 			app.UseRouting();
+
+			app.UseCors("MyPolicy");
 
 			app.UseAuthorization();
 

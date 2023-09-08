@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PeluqueriaApi.Interfaces;
 using PeluqueriaApi.Modelos;
@@ -10,7 +11,8 @@ namespace PeluqueriaApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TurnoController : ControllerBase
+
+	public class TurnoController : ControllerBase
     {
         private readonly ITurnoService _turnoService;
         private readonly ILogger<TurnoController> _logger;
