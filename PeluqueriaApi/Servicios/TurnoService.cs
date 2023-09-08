@@ -28,5 +28,15 @@ namespace PeluqueriaApi.Servicios
 		{
 			await _turnoRepository.InsertTurno(turno);
 		}
+
+		public async Task DeleteTurno(int id)
+		{
+			await _turnoRepository.DeleteTurno(id);
+		}
+
+		public async Task UpdateTurno(int id, Turnos turno)
+		{
+			await _turnoRepository.UpdateTurno(id, turno);
+		}
 	}
 }
