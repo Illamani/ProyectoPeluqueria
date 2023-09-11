@@ -21,10 +21,18 @@ export class TurnoService {
   }
 }
 
-export interface Turno{
-  id: number,
-  apellido: string,
-  fecha: string,
-  tipoPeinado: string,
-  nombre: string
+// export interface Turno{
+//   id: number,
+//   apellido: string,
+//   fecha: Date,
+//   tipoPeinado: string,
+//   nombre: string
+// }
+
+export class Turno {
+  id: number;
+  apellido: string;
+  fecha: Date;
+  tipoPeinado: string;
+  nombre: string ;
 }

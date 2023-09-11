@@ -1,20 +1,6 @@
 <body class="app_body">    
     <button class="btn btn-outline-info" (click)="this.getTurnos()">Mostrar Turnos</button>
-
-    <!-- <table>
-        <tr>
-            <td>Nombre</td>
-            <td>Apellido</td>
-            <td>Tipo de peinado</td>
-            <td>Fecha</td>
-        </tr>
-        <tr *ngFor="let turno of turnosList">
-            <td>{{this.turno.nombre}}</td>
-            <td>{{this.turno.apellido}}</td>
-            <td>{{this.turno.tipoPeinado}}</td>
-            <td>{{this.turno.fecha}}</td>
-        </tr>
-    </table> -->      
+        
       <table class="table">
         <thead class="thead-light">
           <tr>
@@ -27,6 +13,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let turno of turnosList">
+                <td>{{this.turno.id}}</td>
                 <td>{{this.turno.nombre}}</td>
                 <td>{{this.turno.apellido}}</td>
                 <td>{{this.turno.tipoPeinado}}</td>

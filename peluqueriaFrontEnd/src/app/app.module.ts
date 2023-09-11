@@ -5,15 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TurnoComponent } from './turno/turno.component';
 import { RouterModule } from '@angular/router';
-
+import { AddEditTurnoComponent } from './turno/add-edit-turno/add-edit-turno.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    TurnoComponent
+    TurnoComponent,
+    AddEditTurnoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
     RouterModule,
   ],

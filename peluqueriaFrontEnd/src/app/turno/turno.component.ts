@@ -7,7 +7,7 @@ import { TurnoService, Turno } from '../turno.service'
   styleUrls: ['./turno.component.css']
 })
 export class TurnoComponent implements OnInit {
-  turno: Turno | null = null;
+  turno: Turno;
   turnosList : Turno[] = [];
 
   constructor(private turnoService : TurnoService) { }
