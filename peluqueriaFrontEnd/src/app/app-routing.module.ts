@@ -8,8 +8,8 @@ import { ViewClientesComponent } from './clientes/view-clientes/view-clientes.co
 const routes: Routes = [
   {path: 'turno', component: TurnoComponent},
   {path: 'turnoEdit', component: AddEditTurnoComponent},
-  {path: 'cliente', component: AddEditClientesComponent},
-  {path: 'clienteEdit', component: ViewClientesComponent}
+  {path: 'clienteEdit', component: AddEditClientesComponent},
+  {path: 'cliente', component: ViewClientesComponent}
 ];
 
 @NgModule({

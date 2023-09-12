@@ -10,8 +10,9 @@ export class TurnoService {
   turnosList: Turno[] = [];
   constructor(private http : HttpClient) { }
 
+  apiUrl : 'https://localhost:44330/api/Turno/'
 
-  getProduct(): Observable<Turno>{
+  getFirstTurno(): Observable<Turno>{
     return this.http.get<Turno>('https://localhost:44330/api/Turno/get-first-turno');
   }
 

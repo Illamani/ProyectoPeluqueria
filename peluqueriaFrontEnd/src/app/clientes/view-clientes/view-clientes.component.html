@@ -1,1 +1,23 @@
-<p>view-clientes works!</p>
+<body class="app_body">    
+    <button class="btn btn-outline-info" (click)="this.getClientes()">Mostrar Turnos</button>        
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Tipo de Peinado</th>
+                <th scope="col">Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let turno of clienteList">
+                    <td>{{this.turno.id}}</td>
+                    <td>{{this.turno.nombre}}</td>
+                    <td>{{this.turno.apellido}}</td>
+                    <td>{{this.turno.sexo}}</td>
+                    <td>{{this.turno.fechaNacimiento}}</td>
+                </tr>
+            </tbody>
+        </table>
+</body>

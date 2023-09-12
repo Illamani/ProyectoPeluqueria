@@ -13,7 +13,7 @@ export class TurnoComponent implements OnInit {
   constructor(private turnoService : TurnoService) { }
 
   ngOnInit(): void {
-    this.turnoService.getProduct().subscribe(response =>{
+    this.turnoService.getFirstTurno().subscribe(response =>{
       this.turno = response;
     });
   }

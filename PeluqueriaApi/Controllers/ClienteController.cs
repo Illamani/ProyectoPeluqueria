@@ -36,7 +36,7 @@ namespace PeluqueriaApi.Controllers
 			return ClienteDto;
 		}
 
-		[HttpGet("get-cliente")]
+		[HttpGet("get-clientes")]
 		public async Task<List<ClienteDto>> GetCliente()
 		{
 			var turno = await _clienteService.GetClientes();
