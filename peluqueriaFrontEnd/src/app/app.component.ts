@@ -1,5 +1,5 @@
 import { Component, OnInit,AfterViewInit } from '@angular/core';
-import { TurnoService } from './turno.service';
+import { TurnoService } from './services/turno.service';
 
 @Component({
   selector: 'app-root',

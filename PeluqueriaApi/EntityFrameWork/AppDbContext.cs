@@ -11,8 +11,9 @@ namespace PeluqueriaApi.EntityFrameWork
 		}
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("Server=localhost;Database=peluqueria;Trusted_Connection=True;Encrypt=False;");
+			optionsBuilder.UseSqlServer("Server=localhost;Database=Peluqueria;Trusted_Connection=True;Encrypt=False;");
 		}
 		public DbSet<Turnos> Turnos { get; set; }
+		public DbSet<Clientes> Clientes { get; set;}
 	}
 }

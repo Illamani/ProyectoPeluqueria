@@ -54,6 +54,8 @@ namespace PeluqueriaApi
 
 			services.AddScoped<ITurnoService, TurnoService>();
 			services.AddScoped<ITurnoRepositorio, TurnoRepositorio>();
+			services.AddScoped<IClienteRepositorio, ClienteRepositorio>();
+			services.AddScoped<IClientesService, ClienteService>();
 
 			services.AddControllers();
 			services.AddSwaggerGen(c =>
